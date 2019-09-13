@@ -1,0 +1,88 @@
+GET http://localhost:3002/
+
+
+
+###
+POST http://localhost:3002/api/users/register
+Content-Type: application/json
+
+{
+    "name":"linrui",
+    "email":"857287645@qq.com",
+    "password":"L857287645",
+    "identity":"employee"
+}
+
+###
+POST http://localhost:3002/api/users/login
+Content-Type: application/json
+
+{
+    "email":"857287645@qq.com",
+    "password":"L857287645"
+}
+
+###
+
+POST http://localhost:3002/api/profiles/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNjM4NzZhNmIwNmI4MjlmODgwZjRkZSIsIm5hbWUiOiJsaW5ydWkiLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyL2Q0MTVmMGUzMGM0NzFkZmRkOWJjNGY4MjczMjllZjQ4P3M9MjAwJnI9cGcmZD1tbSIsImlkZW50aXR5IjoiZW1wbG95ZWUiLCJpYXQiOjE1NjY5ODI2OTcsImV4cCI6MTU2Njk4NjI5N30.pwhT3xMRdHCtigYVkkf_6bAaRgZRbABKFN1-4kOwzZg
+
+{
+    "date":1599985655233,
+    "type":"转账哈哈啊",
+    "describe":"购买课程",
+    "income":"+260000",
+    "expend":"-250000",
+    "cash":"100000",
+    "remark":"vue全栈课程"
+}
+
+###
+
+GET http://localhost:3002/api/profiles
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNjM4NzZhNmIwNmI4MjlmODgwZjRkZSIsIm5hbWUiOiJsaW5ydWkiLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyL2Q0MTVmMGUzMGM0NzFkZmRkOWJjNGY4MjczMjllZjQ4P3M9MjAwJnI9cGcmZD1tbSIsImlkZW50aXR5IjoiZW1wbG95ZWUiLCJpYXQiOjE1NjY4MTA5MDUsImV4cCI6MTU2NjgxNDUwNX0.M83PGg_c1y2VQ_e20NjsRJkR9vwwvSVhM9BdsIn-94A
+
+###
+
+GET http://localhost:3002/api/profiles/5d63a13554a34d34807ea541
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNjM4NzZhNmIwNmI4MjlmODgwZjRkZSIsIm5hbWUiOiJsaW5ydWkiLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyL2Q0MTVmMGUzMGM0NzFkZmRkOWJjNGY4MjczMjllZjQ4P3M9MjAwJnI9cGcmZD1tbSIsImlkZW50aXR5IjoiZW1wbG95ZWUiLCJpYXQiOjE1NjY4MTA5MDUsImV4cCI6MTU2NjgxNDUwNX0.M83PGg_c1y2VQ_e20NjsRJkR9vwwvSVhM9BdsIn-94A
+
+###
+
+POST   http://localhost:3002/api/profiles/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNjM4NzZhNmIwNmI4MjlmODgwZjRkZSIsIm5hbWUiOiJsaW5ydWkiLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyL2Q0MTVmMGUzMGM0NzFkZmRkOWJjNGY4MjczMjllZjQ4P3M9MjAwJnI9cGcmZD1tbSIsImlkZW50aXR5IjoiZW1wbG95ZWUiLCJpYXQiOjE1NjY5Nzg2MDksImV4cCI6MTU2Njk4MjIwOX0._zsSZ69JFM2_Fx2ivKy5KFIsc88uVzWp6Hb8q53fd9A
+
+{   
+    "date": 1566978056561,
+    "type": "转账",
+    "describe": "购买教材",
+    "income": "+26000",
+    "expend": "-25000",
+    "cash": "80000",
+    "remark": "买了很多啊啊啊啊啊啊"
+    }
+###
+
+PUT  http://localhost:3002/api/profiles/edit/5d63a13554a34d34807ea541
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNjM4NzZhNmIwNmI4MjlmODgwZjRkZSIsIm5hbWUiOiJsaW5ydWkiLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyL2Q0MTVmMGUzMGM0NzFkZmRkOWJjNGY4MjczMjllZjQ4P3M9MjAwJnI9cGcmZD1tbSIsImlkZW50aXR5IjoiZW1wbG95ZWUiLCJpYXQiOjE1NjY5Nzg2MDksImV4cCI6MTU2Njk4MjIwOX0._zsSZ69JFM2_Fx2ivKy5KFIsc88uVzWp6Hb8q53fd9A
+
+{   
+    "date": 1566978056561,
+    "type": "转账",
+    "describe": "购买教材",
+    "income": "+26000",
+    "expend": "-25000",
+    "cash": "80000",
+    "remark": "买了很多啊啊啊啊啊啊"
+    }
+
+###
+
+DELETE   http://localhost:3002/api/profiles/delete/5d63a13554a34d34807ea541
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNjM4NzZhNmIwNmI4MjlmODgwZjRkZSIsIm5hbWUiOiJsaW5ydWkiLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyL2Q0MTVmMGUzMGM0NzFkZmRkOWJjNGY4MjczMjllZjQ4P3M9MjAwJnI9cGcmZD1tbSIsImlkZW50aXR5IjoiZW1wbG95ZWUiLCJpYXQiOjE1NjY4MTA5MDUsImV4cCI6MTU2NjgxNDUwNX0.M83PGg_c1y2VQ_e20NjsRJkR9vwwvSVhM9BdsIn-94A
